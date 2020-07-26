@@ -1,0 +1,19 @@
+Segments required:
+
+HEADER - required for emulators, defines the "cart" - as in how many and what size chips would be on a physical board (CHR ROM and PRG ROM)
+
+ZEROPAGE - from 0 - FF the most significant byte is not needed
+
+STARTUP - Where code starts (not in CPU, but for assembler)
+
+VECTORS - special addresses that 6502 needs to operate
+    Three interrupts
+    NMI - time when scan gun in CRT reaches bottom and is going back to top of screen
+    Reset - What to do if reset button is pressed
+    "undefined" - interrupt for special hardware like a mapper
+
+CHARS - Where to pull chr (graphics) files from
+
+Stack register always counts down, and is initialized with #$FF in reset
+
+When setting up palette data $00 is background
