@@ -17,3 +17,9 @@ CHARS - Where to pull chr (graphics) files from
 Stack register always counts down, and is initialized with #$FF in reset
 
 When setting up palette data $00 is background
+
+Sprites - 
+	byte 1 = y position
+	byte 2 = tile #
+	byte 3 = attributes
+	byte 4 = x position
